@@ -7,11 +7,13 @@
     text-transform: capitalize;
 }
 .navbar{
-    margin: 0 10px 0 10px;
-    height: 70px;
+    margin: 0 30px 0 30px;
+    height: 50px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 12;
 }
 .spectral-extralight {
     font-family: "Spectral", serif;
@@ -126,12 +128,17 @@
   'GRAD' 0,
   'opsz' 24
 }
+.material-symbols-outlined:hover{
+    background-color: #cadacd;
+    cursor: pointer;
+}
 
 .lora-uniquifier{
-  font-family: "Lora", serif;
-  font-style: inherit ;
-  font-size: 24;
-  line-height: 32;
+  font-family: "Lora", sans-serif;
+  font-style: normal ;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
   color: #505041;
   text-align: center;
   margin: 0;
@@ -167,14 +174,20 @@
     border-radius: 0 5px 5px 0;
     
 }
+.subscribe-button:hover{
+    background-color:#eb1912;
+}
 .subscribe-button-footer {
     padding: 13px 20px;
-    background-color: #e74c3c;
+    background-color: #E74C3C;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     border: 1px solid white;
+}
+.subscribe-button-footer:hover{
+    background-color:#eb1912;
 }
 .text-footer{
     text-align: center;
@@ -194,6 +207,7 @@
     color: white;
     text-align: center;
 }
+
 .email{
     width: 250px;
     padding: 12px;
@@ -314,7 +328,7 @@
 
 .container{
     margin: 0% 30% 0% 30%;
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 30px;
 }
 li{
     display: inline;

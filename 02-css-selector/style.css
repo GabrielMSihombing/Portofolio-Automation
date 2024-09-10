@@ -1,0 +1,365 @@
+.header{
+    background: #F2F2E3;
+    width: 100%;
+    border-bottom: 1px solid #cadacd;
+}
+.topnav{
+    text-transform: capitalize;
+}
+.navbar{
+    margin: 0 10px 0 10px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.spectral-extralight {
+    font-family: "Spectral", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .spectral-light {
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .spectral-regular {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .spectral-medium {
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .spectral-semibold {
+    font-family: "Spectral", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .spectral-bold {
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .spectral-extrabold {
+    font-family: "Spectral", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .spectral-extralight-italic {
+    font-family: "Spectral", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .spectral-light-italic {
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .spectral-regular-italic {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .spectral-medium-italic {
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .spectral-semibold-italic {
+    font-family: "Spectral", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .spectral-bold-italic {
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .spectral-extrabold-italic {
+    font-family: "Spectral", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+.logo{
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+}
+.right-bar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.right-bar ul li{
+    padding-right: 10px;
+}
+.account{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.account-desc{
+    justify-content: right;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.lora-uniquifier{
+  font-family: "Lora", serif;
+  font-style: inherit ;
+  font-size: 24;
+  line-height: 32;
+  color: #505041;
+  text-align: center;
+  margin: 0;
+}
+.subscribe{
+    background: #E85C57;
+    border: 1px solid #E85C57;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin-left: 0;
+    cursor: pointer;
+    
+}
+.subscribe:hover{
+    background-color:#eb1912;
+}
+.subscribe-container {
+    text-align: center;
+    align-items: center;
+}
+.subscribe-container-footer {
+    text-align: center;
+    align-items: center;
+    
+}
+.subscribe-button {
+    padding: 13px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    
+}
+.subscribe-button-footer {
+    padding: 13px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid white;
+}
+.text-footer{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    font-style: normal;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.subscribe-footer{
+    padding: 48px 0 64px 0;
+    background-color: #e74c3c;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    color: white;
+    text-align: center;
+}
+.email{
+    width: 250px;
+    padding: 12px;
+    background-color: #E3E3D5;
+    border: 1px solid #e74c3c;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.login{
+    background: #F2F2E3;
+    border: 1px solid #cadacd;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    margin-left: 0;
+    cursor: pointer;
+
+}
+.login:hover{
+    background-color:#9d9d9b;
+}
+.interaction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.interaction-section{
+    display: flex;
+}
+
+.nilai{
+    display: flex;
+    font-family: "Lora", serif;
+}
+.like{
+    display: flex;
+    padding: 10px;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #cadacd;
+    background: #F2F2E3;
+    border-radius: 20px;
+    color: #81827C;
+    margin-left: 0;
+    cursor: pointer;
+    align-items: center;
+}
+.like:hover{
+    background-color:#cadacd;
+}
+.title{
+    font-family: "Lora", sans-serif;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 36px;
+    color: rgb(80, 80, 65);
+    font-weight: 600;
+    margin: 0;
+}
+.sub-title{
+    font-family: "Lora", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgb(80, 80, 65);
+    font-weight: 400;
+    margin: 0;
+}
+.description{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: rgb(80, 80, 65);
+    font-size: 18px;
+    line-height: 25px;
+    font-style: normal;
+    margin: 0;
+}
+.comment{
+    display: flex;
+    padding: 10px;
+    width: 55px;
+    height: 30px;
+    border: 1px solid #cadacd;
+    background: #F2F2E3;
+    border-radius: 30px;
+    color: #81827C;
+    cursor: pointer;
+    align-items: center;
+}
+.comment:hover{
+    background-color:#cadacd;
+}
+.share{
+    display: flex;
+    padding: 10px;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #cadacd;
+    background: #F2F2E3;
+    border-radius: 20px;
+    color: #81827C;
+    cursor: pointer;
+    align-items: center;
+}
+.share:hover{
+    background-color:#cadacd;
+}
+.image1 img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.bg-color{
+    background-color: #F2F2E3;
+}
+
+.container{
+    margin: 0% 30% 0% 30%;
+    padding: 0 20px 0 20px;
+}
+li{
+    display: inline;
+}
+.btn {
+    border: 1px solid #3498db;
+    border-radius: 20px;
+    background-color: Transparent;
+    height: 30px;
+    width: 80px;
+    color: #000000;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+    .btn:hover {
+  background-color: rgb(116, 152, 236);
+}
+    .text {
+  display: inline-block;
+  text-align: center;
+}
+    .text-bottom {
+  display: inline-block;
+  vertical-align: bottom;
+}
+    .text-center {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #81827C;
+}
+    .btn-space {
+    margin-right: 5px;
+}
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+    .input-email[type="email"] {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #e74c3c;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}

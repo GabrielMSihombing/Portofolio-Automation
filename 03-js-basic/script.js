@@ -64,7 +64,7 @@ const submit = document.querySelector("#btn2");
     }
     setTimeout(() => button.click(),3000);
 
-    function submitBtn(){
+    function loginBtn(){
         alert("Login Berhasil");
     }
     setTimeout(() => submit.click(),6000);

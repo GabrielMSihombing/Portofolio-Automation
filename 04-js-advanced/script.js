@@ -1,7 +1,7 @@
-let angka = ["1","2","3","4","5","6","7","8","9","10"];
+let angka = [1,2,3,4,5,6,7,8,9,10];
 
 for (let i = 1; i <= angka.length; i++) {
-    if (i % 2 == 0) {
-        document.write(i);
+    if (angka[i] % 2 == 0) {
+        document.write(angka [i]);
     }
 }

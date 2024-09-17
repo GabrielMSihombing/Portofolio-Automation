@@ -1,4 +1,4 @@
-import { buah } from "./buah.js";
+import {buah} from "./buah.js";
 
 
 for(let buahh of buah){

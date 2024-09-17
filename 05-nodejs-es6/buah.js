@@ -14,7 +14,7 @@ let buah = [
         warna: "Orange",
         rasa: "Asam",
     }
-    ]
+];
     
-export{buah}
+export {buah}
     

@@ -10,7 +10,7 @@ const getSingleUsers = async() => {
     }
 };
 
-getSingleUsers();
+
 
 const payloadUser = {
     "name": "Gabriel",
@@ -25,7 +25,7 @@ const addNewUsers = async(payload) => {
     }
 };
 
-// addNewUsers(payloadUser);
+
 
 const payloadUpdate = {
     "name" : "Kentung"
@@ -39,7 +39,7 @@ const updateUsersById = async (id, payload) =>{
     }
 
 };
-// updateUsersById(346, payloadUpdate);
+
 
 const deleteUserById = async (id) => {
     try {
@@ -49,4 +49,8 @@ const deleteUserById = async (id) => {
         console.log(error);
     }
 };
-// deleteUserById(346);
+
+getSingleUsers();
+addNewUsers(payloadUser);
+updateUsersById(2, payloadUpdate);
+deleteUserById(2);

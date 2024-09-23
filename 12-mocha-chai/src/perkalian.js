@@ -1,13 +1,13 @@
 function Perkalian(angka1, angka2) {
-    if (arguments.length < 2) {
-        throw new Error("Dua Parameter Diperlukan");
+  
+    if (angka1 === undefined || angka2 === null) 
+        throw 'Parameter Harus diisi'
+    if (typeof angka1 !== 'number') 
+        return 'Parameter angka1 Harus Berupa Angka'
+    if (typeof angka2 !== 'number') 
+        return 'Parameter angka2 Harus Berupa Angka'
 
-    }
-    if (typeof angka1 !== 'number' || typeof angka2 !== 'number') {
-        throw new Error('Parameter harus bertipe number');
-
-    }
-
-    return angka1 * angka2;
+    const hasil = angka1 * angka2; 
+    return hasil;
 }
 export{Perkalian};

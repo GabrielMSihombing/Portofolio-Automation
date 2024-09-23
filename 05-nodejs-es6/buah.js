@@ -5,7 +5,7 @@ let buah = [
         rasa: "Manis",
     },
     {
-        nama: "Apel",
+        nama: "Apell",
         warna: "Merah",
         rasa: "manis",
     },

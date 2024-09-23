@@ -13,12 +13,12 @@ const getSingleUsers = async() => {
 
 
 const payloadUser = {
-    "name": "Gabriel",
+    "name": "Gabriell",
     "job": "Chef"
 };
-const addNewUsers = async(payload) => {
+const addNewUsers = async(user) => {
     try {
-      const response = await axios.post(`https://reqres.in/api/users`,payload); 
+      const response = await axios.post(`https://reqres.in/api/users`,user); 
       console.log(response);
     } catch (error) {
         console.log(error);

@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-24T02:47:26.333Z",
+    "end": "2024-09-24T02:47:26.341Z",
+    "duration": 8,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f11a62b6-8e1d-44d0-bd0d-6cf1674747e1",
+      "title": "",
+      "fullFile": "D:\\Bootcamp_QA\\tugas-gabriel\\12-mocha-chai\\src\\perkalian.spec.js",
+      "file": "\\src\\perkalian.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "43f46e4c-9710-4b04-8cba-cf781dc03c50",
+          "title": "Perkalian",
+          "fullFile": "D:\\Bootcamp_QA\\tugas-gabriel\\12-mocha-chai\\src\\perkalian.spec.js",
+          "file": "\\src\\perkalian.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hasil Perkalian Benar",
+              "fullTitle": "Perkalian Hasil Perkalian Benar",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const angka1 = 20\n        const angka2 = 5\n        const hasil = Perkalian(angka1, angka2)\n        expect(hasil).to.equal(100);",
+              "err": {},
+              "uuid": "23d8d2b6-7714-408c-adf7-de4ba6404f74",
+              "parentUUID": "43f46e4c-9710-4b04-8cba-cf781dc03c50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Return Hasil Perkalian berupa angka",
+              "fullTitle": "Perkalian Return Hasil Perkalian berupa angka",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const angka1 = 20\n        const angka2 = 5\n        const hasil = Perkalian(angka1, angka2)\n        expect(hasil).to.be.a('number');",
+              "err": {},
+              "uuid": "deebf696-4dae-4267-a307-43c9e4f46ae6",
+              "parentUUID": "43f46e4c-9710-4b04-8cba-cf781dc03c50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hasil Perkalian dengan parameter angka berupa string",
+              "fullTitle": "Perkalian Hasil Perkalian dengan parameter angka berupa string",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const angka1 = 20\n        const angka2 = '5'\n        const hasil = Perkalian(angka1, angka2)\n        expect(hasil).to.equal('Parameter angka2 Harus Berupa Angka');",
+              "err": {},
+              "uuid": "c102009f-a4d6-4138-89ff-5e8fc620b09a",
+              "parentUUID": "43f46e4c-9710-4b04-8cba-cf781dc03c50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hasil Perkalian dengan parameter tidak lengkap",
+              "fullTitle": "Perkalian Hasil Perkalian dengan parameter tidak lengkap",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const hasil = function (){\n            Perkalian()\n        }\n        expect(hasil).to.throw('Parameter Harus diisi');",
+              "err": {},
+              "uuid": "8322d60f-74be-497f-ad0c-2bf3f733ac60",
+              "parentUUID": "43f46e4c-9710-4b04-8cba-cf781dc03c50",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "23d8d2b6-7714-408c-adf7-de4ba6404f74",
+            "deebf696-4dae-4267-a307-43c9e4f46ae6",
+            "c102009f-a4d6-4138-89ff-5e8fc620b09a",
+            "8322d60f-74be-497f-ad0c-2bf3f733ac60"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.7.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

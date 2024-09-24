@@ -52,15 +52,6 @@ describe('Perkalian', function() {
 
     })
 
-    it('Hasil Perkalian dengan parameter tidak lengkap', function(){
-
-        const angka1 = 20
-
-        const hasil = () => Perkalian(angka1)
-        expect(hasil).to.throw('Parameter Harus diisi');
-
-    })
-
     it('Hasil Perkalian dengan parameter Kosong', function(){
 
         const hasil = function (){

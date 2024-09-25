@@ -13,7 +13,7 @@ const getSingleUsers = async() => {
 
 
 const payloadUser = {
-    "name": "Gabriell",
+    "name": "Gabriel",
     "job": "Chef"
 };
 const addNewUsers = async(user) => {

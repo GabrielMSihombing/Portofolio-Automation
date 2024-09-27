@@ -1,0 +1,8 @@
+Regresion testing adalah testing yang dilakukan setelah adanya update fitur atau perbaikan bug untuk menguji apakah fitur yang sudah ada terkena / tersenggol bug atau update fitur atau perbaikan bug tidak mempengaruhi fitur yang sudah ada
+
+Smoke testing adalah testing yang dilakukan untuk menguji fitur utama saja, misalkan pada platform Youtube bisa mencari video, dan menonton, tes ini dilakukan untuk memastikan tidak adanya bug yang dapat mengganggu testing lanjutan
+
+
+Waterfall adalah metode pengembangan software yang berurutan seperti air terjun, idealnya pada metode ini tidak bisa kembali ke requirement namun jika masih pada tahap design dan ada fitur yang ingin ditambah masih bisa kembali ke tahap requirement, namun setelah melewati tahap implementasi user tidak bisa meminta kembali ke tahap requirement, harus menyelesaikan terlebih dahulu tahapan yang sudah ada, metode ini juga cocok untuk skala besar dan proses development yang lama
+
+SDLC Agile adalah metode pengembangan software yang dibagi menjadi beberapa cycle, dimana memiliki tahapan planning, design, develop, test, deploy, review, launch, tapahan ini juga memiliki waktu yang singkat. misal ada 2 fitur yang dibuat seperti login, crud, maka bisa hanya membuat 1 fitur terlebih dahulu jika sudah selesai hingga tahap review maka kembali lagi ke tahap design fitur selanjutnya.

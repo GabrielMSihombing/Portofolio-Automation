@@ -26,7 +26,7 @@ describe('FITUR REVIEW PRODUK', function (){
                 await browser.pause(7000)
             
             })
-           it('menekan tombol amount review', async function () {
+            it('menekan tombol amount review', async function () {
 
                 await productPage.amountReview()
 
@@ -80,7 +80,7 @@ describe('FITUR REVIEW PRODUK', function (){
                 await expect(productPage.nickerrorMessage).toHaveText(
                 expect.stringContaining('This is a required field.'))
             })
-           it('mengirim review dengan mengisi semua input kecuali summary', async function () {
+            it('mengirim review dengan mengisi semua input kecuali summary', async function () {
             
                 
                 await productPage.optionRatingByValueRating5()
@@ -102,7 +102,7 @@ describe('FITUR REVIEW PRODUK', function (){
                 await expect(productPage.reviewerrorMessage).toHaveText(
                 expect.stringContaining('This is a required field.'))
             })
-           it('Mengecek response jika langsung menekan tombol submit', async function () {
+            it('Mengecek response jika langsung menekan tombol submit', async function () {
 
                 await productPage.reviewProcess('','','')
                 await browser.pause(10000)
@@ -111,15 +111,15 @@ describe('FITUR REVIEW PRODUK', function (){
                 await expect(productPage.reviewerrorMessage).toHaveText(
                 expect.stringContaining('This is a required field.'))
             })
-           it('mengecek response jika menekan tombol add to cart', async function () {
+            it('mengecek response jika menekan tombol add to cart', async function () {
             
                 await productPage.addToCartButton()
 
                 await expect(productPage.successMessage).toHaveText(
                 expect.stringContaining('You added Fusion Backpack to your shopping cart.'))
 
-           })
-           it('mengecek response jika menekan tombol add to cart dengan jumlah barang 0', async function () {
+            })
+            it('mengecek response jika menekan tombol add to cart dengan jumlah barang 0', async function () {
 
                 await productPage.qtyProcess(0)
                 await productPage.addToCartButton()
@@ -127,8 +127,8 @@ describe('FITUR REVIEW PRODUK', function (){
                 await expect(productPage.errorMessageQty).toHaveText('Please enter a quantity greater than 0.')
                 
                 await browser.pause(7000)
-           })
-           it('mengecek response jika menekan tombol add to cart dengan jumlah barang -1', async function () {
+            })
+            it('mengecek response jika menekan tombol add to cart dengan jumlah barang -1', async function () {
 
                 await productPage.qtyProcess(-1)
                 await productPage.addToCartButton()
@@ -136,8 +136,8 @@ describe('FITUR REVIEW PRODUK', function (){
                 await expect(productPage.errorMessageQty).toHaveText('Please enter a quantity greater than 0.')
                 
                 await browser.pause(7000)
-           })
-           it('mengecek response jika menekan tombol add to cart dengan jumlah barang 99999', async function () {
+            })
+            it('mengecek response jika menekan tombol add to cart dengan jumlah barang 99999', async function () {
 
                 await productPage.qtyProcess(99999)
                 await productPage.addToCartButton()
@@ -145,8 +145,8 @@ describe('FITUR REVIEW PRODUK', function (){
                 await expect(productPage.errorMessageQty).toHaveText('The maximum you may purchase is 10000.')
 
                 await browser.pause(7000)
-           })
-           it('mengecek response jika menekan tombol add to cart dengan jumlah barang 10000', async function () {
+            })
+            it('mengecek response jika menekan tombol add to cart dengan jumlah barang 10000', async function () {
 
                 await productPage.qtyProcess(10000)
                 await productPage.addToCartButton()
@@ -156,26 +156,75 @@ describe('FITUR REVIEW PRODUK', function (){
                 await expect(productPage.errorMsgQty).toHaveText('The requested qty exceeds the maximum qty allowed in shopping cart')
 
                 await browser.pause(7000)
-           })
-
-           it('meperbesar gambar produk', async function () {
+            })
+            it('meperbesar gambar produk', async function () {
 
                 await productPage.image.click()
+
                 //belum cek validasi
                 await browser.pause(7000)
-           })
-           it('Zoom In gambar produk', async function () {
+            })
+            it('menekan Zoom In gambar produk', async function () {
 
                 await productPage.zoomInOnProduct()
-                //belum cek validasi
+
                 await browser.pause(7000)
-           })
-           it('Zoom Out gambar produk', async function () {
+            })
+            it('menekan Zoom In gambar produk dan mengganti gambar panah kanan', async function () {
+
+                await productPage.zoomInOnProduct()
+                await productPage.nextImage()
+            
+                const nextIsDisabled = await productPage.validateNextImageDisabled();
+
+                expect(nextIsDisabled).toBe("true");
+
+                await browser.pause(7000)
+            })
+            it('menekan Zoom In gambar produk dan mengganti gambar panah kiri', async function () {
+
+                await productPage.zoomInOnProduct()
+                await browser.pause(3000)
+                await productPage.prevImage()
+                
+                const prevIsDisabled = await productPage.validatePrevImageDisabled();
+                expect(prevIsDisabled).toBe("true");
+
+                await browser.pause(7000)
+            })
+            it('Zoom Out gambar produk', async function () {
 
                 await productPage.zoomOutOnProduct()
+                
                 //belum cek validasi
+                await browser.pause(2000)
+
+                //belum cek validasi
+                await productPage.closeImage()
                 await browser.pause(7000)
-           })
+            })
+            it('Next image', async function () {
+
+                await productPage.nextImage()
+                
+                const nextIsDisabled = await productPage.validateNextImageDisabled();
+
+                expect(nextIsDisabled).toBe("true");
+                
+                await browser.pause(7000)
+            })
+            it('Previous image', async function () {
+
+                await browser.pause(3000)
+
+                await productPage.prevImage()
+                
+                const prevIsDisabled = await productPage.validatePrevImageDisabled();
+
+                expect(prevIsDisabled).toBe("true");
+
+                await browser.pause(7000)
+            })
         //    it('mengecek jumlah yang diinputkan kedalam cart sama dengan isi cart menggunakan subtotal', async function () {
 
         //         await productPage.qtyProcess(2)

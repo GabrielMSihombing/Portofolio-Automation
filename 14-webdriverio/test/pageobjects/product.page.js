@@ -16,7 +16,10 @@ class productPage{
     get errorMsgQty(){return $('.messages')}
     get priceCartElement (){return $('.amount')}
     get image(){return $('.fotorama__img')}
-    // get changeImage (){return $('img.fotorama__img[src*="mb02-blue-0.jpg"]:first-of-type')}
+    get imageValidation(){return $('.fotorama__arr--prev[disabled="disabled"]')}
+    get nextArrow(){return $('.fotorama__arr--next')}
+    get prevArrow(){return $('.fotorama__arr--prev')}
+
     get zoomInImage (){return $('.fotorama__nav__frame fotorama__nav__frame--fotorama__zoom-in zoom-in-loaded')}
     get validateZoomInImage (){return $('.fotorama__stage__shaft')}
 
@@ -100,6 +103,32 @@ class productPage{
         const viewCartPage = $('.action.viewcart');
         await viewCartPage.click();
     }
-
+    async closeImage() {
+        const nextBtnImage = $('.fotorama__fullscreen-icon')
+        await nextBtnImage.click()
+    }
+    async nextImage() {
+        const nextBtnImage = $('.fotorama__arr--next')
+        await nextBtnImage.click()
+    }
+    async prevImage() {
+        const prevtBtnImage = $('.fotorama__arr--prev')
+        await prevtBtnImage.click()
+    }
+    async validateNextImageDisabled() {
+        // Check if the button has the 'disabled' attribute or class
+        const nextIsDisabled = await this.nextArrow.getAttribute('disabled') ||
+        await this.nextArrow.getAttribute('class').includes('disabled');
+        
+        return nextIsDisabled;
+    }
+    async validatePrevImageDisabled() {
+        
+        
+        const prevIsDisabled = await this.prevArrow.getAttribute('disabled') ||
+        await this.prevArrow.getAttribute('class').includes('disabled');
+        
+        return prevIsDisabled;
+    }
 }
 export default new productPage()

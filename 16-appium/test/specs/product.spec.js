@@ -98,4 +98,10 @@ describe('PRODUCT FEATURE', function () {
         await expect(productPage.cartErrorMessage).toHaveText('No Items')
 
     })
+    // it.only('increase product till max', async function () {
+
+    //     while (productPage.increaseQtyProduct.isEnabled()){
+    //     await productPage.increaseQtyProduct.click()}
+
+    // })
 })

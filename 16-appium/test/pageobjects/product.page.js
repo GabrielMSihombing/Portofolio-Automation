@@ -18,13 +18,6 @@ get cartProductTitle(){return $('id=com.saucelabs.mydemoapp.android:id/totalPric
 get cartErrorMessage(){return $('id=com.saucelabs.mydemoapp.android:id/noItemTitleTV')}
 get removeItemCart(){return $('~Removes product from cart')}
 
-
-
-// async logoutProcess() {
-//     await this.menuButton.click()
-//     await this.logoutMenu.click()
-//     await this.logoutConfirm.click()
-//     }
 }
 export default new productPage()
 

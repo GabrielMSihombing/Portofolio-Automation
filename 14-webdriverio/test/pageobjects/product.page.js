@@ -30,12 +30,12 @@ class productPage{
     }
 
     async reviewPage(){
-      const reviewButton = await $('#tab-label-reviews-title')
+      const reviewButton =  $('#tab-label-reviews-title')
       await reviewButton.click()
     }
 
     async optionRatingByValueRating1() {
-        const addReviewButton = await $('a.action.add')
+        const addReviewButton = $('a.action.add')
         await addReviewButton.click()
         // await addReviewButton.click()
         await browser.execute(function () {
@@ -44,7 +44,7 @@ class productPage{
         })
     }
     async optionRatingByValueRating5() {
-        const addReviewButton = await $('a.action.add')
+        const addReviewButton =  $('a.action.add')
         await addReviewButton.click()
         // await addReviewButton.click()
         await browser.execute(function () {

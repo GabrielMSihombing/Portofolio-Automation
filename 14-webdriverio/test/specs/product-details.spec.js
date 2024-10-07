@@ -7,7 +7,6 @@ describe('FITUR REVIEW PRODUK', function (){
     before('Cek Click Fusion Backpack Page', async function () {
                 await productPage.openPage()
                 
-                
             })
             it('menekan tab review produk', async function () {
                 await productPage.reviewPage()
@@ -48,7 +47,7 @@ describe('FITUR REVIEW PRODUK', function (){
 
                 await browser.pause(5000)
             })
-            it('Mengecek response jika mengisi semua field dan rating bintang 5', async function () {
+            it.only('Mengecek response jika mengisi semua field dan rating bintang 5', async function () {
                 
                 await productPage.optionRatingByValueRating5()
                 await browser.pause(1000);

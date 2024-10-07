@@ -211,7 +211,6 @@ describe('FITUR REVIEW PRODUK', function (){
 
                 expect(nextIsDisabled).toBe("true");
                 
-                await browser.pause(7000)
             })
             it('Previous image', async function () {
 
@@ -223,21 +222,21 @@ describe('FITUR REVIEW PRODUK', function (){
 
                 expect(prevIsDisabled).toBe("true");
 
-                await browser.pause(7000)
             })
-        //    it('mengecek jumlah yang diinputkan kedalam cart sama dengan isi cart menggunakan subtotal', async function () {
+            it('mengecek jumlah yang diinputkan kedalam cart sama dengan isi cart menggunakan subtotal', async function () {
 
-        //         await productPage.qtyProcess(2)
-        //         await productPage.addToCartButton()
-        //         await browser.pause(3000)
-        //         await productPage.cart()
-        //         await productPage.editViewcart()
+                await productPage.qtyProcess(2)
+                
+                await productPage.addToCartButton()
+                
+                await browser.pause(2000)
+                
+                await productPage.cart()
+               
+                await productPage.editViewcart()
 
-        //         //belum cek validasi
-        //         // await expect(productPage.priceCartElement).toHaveText(
-        //         //     expect.stringContaining('$118.00'))
-
-        //         await browser.pause(7000)
-        //    })
+                // await expect(productPage.priceCartElement).toHaveText('$118.00')
+                // await browser.pause(7000)
+           })
            
         })

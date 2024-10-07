@@ -4,7 +4,6 @@ class productPage{
     get nicknameInput(){return $('#nickname_field')}
     get summaryInput(){return $('#summary_field')}
     get reviewInput(){return $('#review_field')}
-    // get submitBtn(){return $('.action.submit.primary')}
     get nickerrorMessage(){return $('#nickname_field-error')}
     get sumerrorMessage(){return $('#summary_field-error')}
     get reviewerrorMessage(){return $('#review_field-error')}
@@ -19,7 +18,7 @@ class productPage{
     get imageValidation(){return $('.fotorama__arr--prev[disabled="disabled"]')}
     get nextArrow(){return $('.fotorama__arr--next')}
     get prevArrow(){return $('.fotorama__arr--prev')}
-
+    get prevArrow(){return $('..amount[data-th="Order Total"]')}
     get zoomInImage (){return $('.fotorama__nav__frame fotorama__nav__frame--fotorama__zoom-in zoom-in-loaded')}
     get validateZoomInImage (){return $('.fotorama__stage__shaft')}
 
@@ -57,7 +56,6 @@ class productPage{
         const submitButtonOnly = await $('.action.submit.primary').click()
     }
     
-    //review page action
     async reviewProcess(nickname, summary, review) {
         await this.nicknameInput.setValue(nickname)
         await this.summaryInput.setValue(summary)
@@ -69,15 +67,15 @@ class productPage{
     await this.inputQty.setValue(qty)
    }
    async addToCartButton() {
-        const addCartBtn = await $('#product-addtocart-button')
+        const addCartBtn = $('#product-addtocart-button')
         await addCartBtn.click()
    }
    async addReview() {
-        const addreview = await $('a.action.add')
+        const addreview =  $('a.action.add')
         await addreview.click()
    }
    async amountReview() {
-        const addreview = await $('a.action.view')
+        const addreview =  $('a.action.view')
         await addreview.click()
     }
    async zoomInOnProduct() {
@@ -89,10 +87,6 @@ class productPage{
         const zoomOutButton = $('.fotorama__zoom-out[data-gallery-role="fotorama__zoom-out"]');
         await zoomOutButton.click();
    
-    }
-    async priceProductElement() {
-        const totalPriceProduct = await $('.amount[data-th="Order Total"]')
-
     }
     async cart() {
         const CartPage = $('.action.showcart[href="https://magento.softwaretestingboard.com/checkout/cart/"]');

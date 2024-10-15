@@ -30,13 +30,11 @@ class productPage{
     }
 
     async reviewPage(){
-      const reviewButton =  $('#tab-label-reviews-title')
-      await reviewButton.click()
+      const reviewButton = await $('#tab-label-reviews-title').click()
     }
 
     async optionRatingByValueRating1() {
-        const addReviewButton = $('a.action.add')
-        await addReviewButton.click()
+        await $('a.action.add').click()
         // await addReviewButton.click()
         await browser.execute(function () {
             document.querySelector('#Rating_1').checked = true
@@ -44,7 +42,7 @@ class productPage{
         })
     }
     async optionRatingByValueRating5() {
-        const addReviewButton =  $('a.action.add')
+        const addReviewButton = await $('a.action.add')
         await addReviewButton.click()
         // await addReviewButton.click()
         await browser.execute(function () {
@@ -52,38 +50,44 @@ class productPage{
             
         })
     }
+    async optionRatingByValueRating2() {
+        const addReviewButton = await $('a.action.add').click()
+        // await addReviewButton.click()
+        await browser.execute(function () {
+            document.querySelector('#Rating_2').checked = true
+            
+        })
+    }
     async submitButton() {
         const submitButtonOnly = await $('.action.submit.primary').click()
     }
-    
     async reviewProcess(nickname, summary, review) {
         await this.nicknameInput.setValue(nickname)
         await this.summaryInput.setValue(summary)
         await this.reviewInput.setValue(review)
-        // await this.submitBtn.click()
     
-   }
-   async qtyProcess(qty) {
+    }
+    async qtyProcess(qty) {
     await this.inputQty.setValue(qty)
-   }
-   async addToCartButton() {
+    }
+    async addToCartButton() {
         const addCartBtn = $('#product-addtocart-button')
         await addCartBtn.click()
-   }
-   async addReview() {
+    }
+    async addReview() {
         const addreview =  $('a.action.add')
         await addreview.click()
-   }
-   async amountReview() {
+    }
+    async amountReview() {
         const addreview =  $('a.action.view')
         await addreview.click()
     }
-   async zoomInOnProduct() {
+    async zoomInOnProduct() {
         const zoomInButton = $('.fotorama__zoom-in[data-gallery-role="fotorama__zoom-in"]');
 
         await zoomInButton.click();
     }
-   async zoomOutOnProduct() {
+    async zoomOutOnProduct() {
         const zoomOutButton = $('.fotorama__zoom-out[data-gallery-role="fotorama__zoom-out"]');
         await zoomOutButton.click();
    

@@ -4,7 +4,7 @@
   "main": "index.js",
   "start": "node index.js",
   "scripts": {
-    "test": "mocha src/**/*.spec.js"
+    "star": "mocha src/**/*.spec.js"
   },
   "type": "module",
   "keywords": [],

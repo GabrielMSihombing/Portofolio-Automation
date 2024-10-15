@@ -1,10 +1,12 @@
-import { browser, $, expect } from "@wdio/globals";
+import { browser, expect } from "@wdio/globals";
 import productPage from "../pageobjects/product.page.js";
 
 
 
 describe('FITUR REVIEW PRODUK', function (){
     before('Cek Click Fusion Backpack Page', async function () {
+
+                
                 await productPage.openPage()
                 
             })
@@ -47,7 +49,7 @@ describe('FITUR REVIEW PRODUK', function (){
 
                 await browser.pause(5000)
             })
-            it.only('Mengecek response jika mengisi semua field dan rating bintang 5', async function () {
+            it('Mengecek response jika mengisi semua field dan rating bintang 5', async function () {
                 
                 await productPage.optionRatingByValueRating5()
                 await browser.pause(1000);
@@ -56,7 +58,16 @@ describe('FITUR REVIEW PRODUK', function (){
 
                 await expect(productPage.successMessage).toHaveText(
                 expect.stringContaining('You submitted your review for moderation.'))
-            })       
+            })    
+            it.only('mengecek response jika mengisi semua field dan rating bintang 2', async function(){
+                
+                await productPage.reviewPage()
+                await productPage.optionRatingByValueRating2()
+                await productPage.reviewProcess('gabriel','Backpack','tasnya kurang nyaman')
+                await productPage.submitButton()
+
+                await expect(productPage.successMessage).toHaveText(expect.stringContaining('You submitted your review for moderation.'))
+            })   
             it('Mengecek response jika mengosongkan field input bintang', async function () {
             
                 await productPage.addReview()

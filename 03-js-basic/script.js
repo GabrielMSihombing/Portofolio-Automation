@@ -58,10 +58,10 @@ const password = document.querySelector("#inputPassword");
 const button = document.querySelector("#btn");
 const submit = document.querySelector("#btn2");
 
-    function inputBtn(){
+    // function inputBtn(){
         input.value = "testing@gmail.com";
         password.value="testingpassword";
-    }
+    // }
     setTimeout(() => button.click(),3000);
 
     function loginBtn(){
@@ -69,3 +69,8 @@ const submit = document.querySelector("#btn2");
     }
     setTimeout(() => submit.click(),6000);
 
+    setTimeout (()=>{
+        email.value = "prosigmaka@gmail.com"
+       password.value = "prosigmaka123"
+       submitbtn.click()
+       },2000)
